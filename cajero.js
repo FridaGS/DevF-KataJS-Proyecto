@@ -4,6 +4,7 @@ var NombreDeUsuario = document.getElementById("Nombre");
 var EstoDecuentActual = document.getElementById("EstodoDeCuenta");
 var MontoRetirado = document.getElementById("MontoRetirado");
 var SaldoActualizado = document.getElementById("SaldoActualizado");
+var aler=document.getElementById("alert")
 boton.addEventListener("click", evaluar);
 //Con la fucion de contructora ,creamos los las propiedaes y valor del objecto
 function Cuentas(nombre, apellido, edad, contrasena, saldo) {
@@ -21,12 +22,13 @@ var P3 = new Cuentas("Maria", "Peña", 41, "92057", 500);
 function evaluar() {
   var saldoActual = P1.saldo - retiro.value;
   if (retiro.value >= P1.saldo || saldoActual === 9) {
-    alert("Tu cuneta no puede ter menos de $10");
+   aler.classList.remove("alert")
   } else if (retiro.value !== "") {
     NombreDeUsuario.innerHTML = P1.nombre;
     EstoDecuentActual.innerHTML = P1.saldo;
     MontoRetirado.innerHTML = retiro.value;
     SaldoActualizado.innerHTML = saldoActual;
+   
   }
 }
 evaluar();
