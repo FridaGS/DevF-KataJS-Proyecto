@@ -31,10 +31,12 @@ var saldo = document.getElementById("saldo")
 var exit = document.getElementById("exit")
 var pantallaInicial = document.getElementById("pantallaInicial")
 var regresarPantalla = document.getElementById("regresarPantalla")
-//Titulos que se van a modificar
+//Titulos o parrafos que se van a modificar
 var preguntaIdentidad = document.getElementById("preguntaIdentidad")
 var tituloContrasena = document.getElementById("tituloContrasena")
 var tituloSaldo = document.getElementById("tituloSaldo")
+var errorCuenta = document.getElementById("errorCuenta")
+var errorContrasena = document.getElementById("errorContrasena")
 //Variables extras que serán ocultadas o mostradas
 var eleccion = document.getElementById("eleccion")
 var contrasena = document.getElementById("contrasena")
@@ -63,30 +65,27 @@ function passwordF(){
    if(cuentas.frida.contrasenia===ingresoContrasena.value){
        contrasena.classList.add('none')
        operaciones.classList.remove('none')
+       errorContrasena.innerHTML = ""
    }else{
-       var error = document.createElement('p')
-       error.innerHTML = "La contraseña es incorrecta"
-       contrasena.append(error)
+    errorContrasena.innerHTML = "La contraseña es incorrecta, intenta de nuevo"
    }
 }
 function passwordE(){
     if(cuentas.esteban.contrasenia===ingresoContrasena.value){
         contrasena.classList.add('none')
         operaciones.classList.remove('none')
+        errorContrasena.innerHTML = ""
     }else{
-        var error = document.createElement('p')
-        error.innerHTML = "La contraseña es incorrecta"
-        contrasena.append(error)
+        errorContrasena.innerHTML = "La contraseña es incorrecta, intenta de nuevo"
     }
  }
  function passwordD(){
     if(cuentas.diego.contrasenia===ingresoContrasena.value){
         contrasena.classList.add('none')
         operaciones.classList.remove('none')
+        errorContrasena.innerHTML = ""
     }else{
-        var error = document.createElement('p')
-        error.innerHTML = "La contraseña es incorrecta"
-        contrasena.append(error)
+        errorContrasena.innerHTML = "La contraseña es incorrecta, intenta de nuevo"
     }
  }
 //Funcion para consultar saldo
@@ -108,6 +107,7 @@ function IngresarCuenta(){
     switch(noCuenta.value){
         //Validación de la cuenta
         case cuentas.frida.cuenta:
+            errorCuenta.innerHTML = ""
             //Validación de identidad
             eleccion.classList.add('none')
             //Ajuste del titulo de identidad
@@ -122,6 +122,7 @@ function IngresarCuenta(){
         break
         //Validación de la cuenta
         case cuentas.esteban.cuenta:
+            errorCuenta.innerHTML = ""
             //Validación de identidad
             eleccion.classList.add('none')
             //Ajuste del titulo de identidad 
@@ -136,6 +137,7 @@ function IngresarCuenta(){
         break
         //Validación de la cuenta
         case cuentas.diego.cuenta:
+            errorCuenta.innerHTML = ""
             //Validación de identidad
             eleccion.classList.add('none')
             //Ajuste del titulo de identidad
@@ -148,10 +150,8 @@ function IngresarCuenta(){
             //Imprimir el saldo actual de la cuenta 
             tituloSaldo.innerHTML = "Tu saldo actual es de $"+cuentas.diego.saldo
         break
-        default : 
-            var error = document.createElement('p')
-            error.innerHTML = "Esa cuenta no existe"
-            eleccion.append(error)
+        default:
+            errorCuenta.innerHTML = "Esta cuenta no existe, ingresa de nuevo tu numero de cuenta"
     }
 }
 //Boton para ingresar a la cuenta
