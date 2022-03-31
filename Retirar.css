@@ -40,7 +40,7 @@
     z-index: -1;
     position: absolute;
   }
-  body {
+  #contenedor {
     background: url("cajero.jpg");
     background-size: cover;
   }
@@ -52,3 +52,19 @@
   #cera:hover {
     background-color: red;
   }
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.animacion{
+    display: none;
+ 
+}
+.animacion2{
+    position: absolute;
+ z-index: 1;
+}
+table{
+    margin: 10px;
+}

@@ -9,13 +9,22 @@
  
   </head>
   <body id="body">
-      <div class="container-fluid" id="contenedor">
+      <div class="container-fluid" id="contenedor" style="height: 500px;">
+<div class="animacion" id="animacion">
+    <div>
+       <p> Se esta cargado los cabios</p>
+    </div>
+</div>
+
+
+
+
         <div class="row" id="fila_aler"  >
           <div class="aler" id="aler">No puedes trener menos de $10
             <button id="cerrar" class="btn btn-danger ">X</button>
           </div>
         </div>
-          <div class="row h-25 border " >  
+          <div class="row h-25 " >  
 
             <div class="col-sm-12">
             <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
@@ -25,7 +34,7 @@
                 </div>
                 </div>
                      <div class="col-lg-1 col-sm-12">
-                       <button class="btn btn-primary" id="usuario"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                       <button class="btn btn-primary  " title="Cuenta de usuario"id="usuario"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                       </svg></button>
@@ -41,7 +50,7 @@
                           </li>
                           <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-info"id="cera">
                            Salir
-                            <span  class="badge bg-primary rounded-pill ">X</span>
+                            <span  class="badge bg-primary rounded-pill " id="Signodecerar">X</span>
                           </li>
                         </ul>
                        </nav>
@@ -53,7 +62,7 @@
            
      <div class="col-12 col-lg-6 " ><input type="number" id="Retiro"class="form-control border w-100" placeholder="Retiro de efectivo"></div>
     <div class="col-12  col-lg-6" id="botto"><button id="botton" class="btn bg-info w-100">Retirar</button> </div>
-    <div class="col-sm-12 col-lg-6" >
+    <div class="col-sm-12 col-lg-6  align-self-end " >
    <table class="table table-striped table-dark  " >
        <tr>
          <td  >Nombre del usuario</td>
@@ -74,9 +83,20 @@
    </table>
   </div>
 </div>
-</div>
-    <script src="Retirar.js"></script>
 
-    
+</div>
+
+<footer class="container-fluid d-flex justify-content-end d-flex align-items-end " style="height: 200px; background-color: rgb(213, 214, 214); text-decoration: none;">
+    <div class="row ">
+<hr>
+ <div class="col 4"> <a href="#">Potilica de privacidad</a></div>  
+  <div class="col-4"> <a href="#">Terminos y condiciones</a></div> 
+ <div class="col-4">   <a href="#">Contratos</a></div>
+  <div class="col-4"> <a href="#">Contrato de servicio finaciero</a></div> 
+ <div class="col-4"> <a href="#">Buro de entidades federativas</a></div>  
+ <div class="col-4"> <a href="#">Contacto</a></div>  
+ </div>
+</footer>
+    <script src="Retirar.js"></script>  
   </body>
 </html>
