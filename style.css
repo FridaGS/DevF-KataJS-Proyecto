@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .fila {
   visibility: hidden;
   width: 50px;
@@ -52,3 +53,13 @@ body {
 #cera:hover {
   background-color: red;
 }
+=======
+.Cuentas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.none{
+    display: none;
+}
+>>>>>>> 5cc12b608700d0c47255e32868c1a6c485088ed3
